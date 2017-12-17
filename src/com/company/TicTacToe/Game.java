@@ -3,11 +3,11 @@ package com.company.TicTacToe;
 import java.util.Scanner; //https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html
 
 public class Game {
-    static int A1, A2, A3, B1, B2, B3, C1, C2, C3; // A1 for top left, B1 middle left , C1 down left etc.
+    static int T1, T2, T3, M1, M2, M3, D1, D2, D3; // T1 for top left, M1 middle left , D1 down left etc.
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
 
-        String prompt = "Enter your first move(A1 for top left, B1 middle left , C1 down left etc.): "; // prompt for convenience
+        String prompt = "Enter your first move(T1 for top left, M1 middle left , D1 down left etc.): "; // prompt for convenience
         String humanMove = "";
         String computerMove = "";
         boolean gameIsWon = false; // initial state
@@ -50,13 +50,13 @@ public class Game {
 
         String line = "";
         System.out.println();
-        line = " " + getXO(A1) + "|" + getXO(A2) + "|" + getXO(A3);
+        line = " " + getXO(T1) + "|" + getXO(T2) + "|" + getXO(T3);
         System.out.println(line);
         System.out.println("-------");
-        line = " " + getXO(B1) + "|" + getXO(B2) + "|" + getXO(B3);
+        line = " " + getXO(M1) + "|" + getXO(M2) + "|" + getXO(M3);
         System.out.println(line);
         System.out.println("-------");
-        line = " " + getXO(C1) + "|" + getXO(C2) + "|" + getXO(C3);
+        line = " " + getXO(D1) + "|" + getXO(D2) + "|" + getXO(D3);
         System.out.println(line);
         System.out.println();
     }
@@ -90,90 +90,90 @@ public class Game {
 
     public static boolean isValidPlay(String play)
     {
-        if (play.equalsIgnoreCase("A1") & A1 == 0) // just for reminder https://www.tutorialspoint.com/java/java_string_equalsignorecase.htm
+        if (play.equalsIgnoreCase("T1") & T1 == 0) // just for reminder https://www.tutorialspoint.com/java/java_string_equalsignorecase.htm
             return true;
-        if (play.equalsIgnoreCase("A2") & A2 == 0)
+        if (play.equalsIgnoreCase("T2") & T2 == 0)
             return true;
-        if (play.equalsIgnoreCase("A3") & A3 == 0)
+        if (play.equalsIgnoreCase("T3") & T3 == 0)
             return true;
-        if (play.equalsIgnoreCase("B1") & B1 == 0)
+        if (play.equalsIgnoreCase("M1") & M1 == 0)
             return true;
-        if (play.equalsIgnoreCase("B2") & B2 == 0)
+        if (play.equalsIgnoreCase("M2") & M2 == 0)
             return true;
-        if (play.equalsIgnoreCase("B3") & B3 == 0)
+        if (play.equalsIgnoreCase("M3") & M3 == 0)
             return true;
-        if (play.equalsIgnoreCase("C1") & C1 == 0)
+        if (play.equalsIgnoreCase("D1") & D1 == 0)
             return true;
-        if (play.equalsIgnoreCase("C2") & C2 == 0)
+        if (play.equalsIgnoreCase("D2") & D2 == 0)
             return true;
-        if (play.equalsIgnoreCase("C3") & C3 == 0)
+        if (play.equalsIgnoreCase("D3") & D3 == 0)
             return true;
         return false;
     }
 
     public static void updateBoard(String play, int player)
     {
-        if (play.equalsIgnoreCase("A1"))
-            A1 = player;
-        if (play.equalsIgnoreCase("A2"))
-            A2 = player;
-        if (play.equalsIgnoreCase("A3"))
-            A3 = player;
-        if (play.equalsIgnoreCase("B1"))
-            B1 = player;
-        if (play.equalsIgnoreCase("B2"))
-            B2 = player;
-        if (play.equalsIgnoreCase("B3"))
-            B3 = player;
-        if (play.equalsIgnoreCase("C1"))
-            C1 = player;
-        if (play.equalsIgnoreCase("C2"))
-            C2 = player;
-        if (play.equalsIgnoreCase("C3"))
-            C3 = player;
+        if (play.equalsIgnoreCase("T1"))
+            T1 = player;
+        if (play.equalsIgnoreCase("T2"))
+            T2 = player;
+        if (play.equalsIgnoreCase("T3"))
+            T3 = player;
+        if (play.equalsIgnoreCase("M1"))
+            M1 = player;
+        if (play.equalsIgnoreCase("M2"))
+            M2 = player;
+        if (play.equalsIgnoreCase("M3"))
+            M3 = player;
+        if (play.equalsIgnoreCase("D1"))
+            D1 = player;
+        if (play.equalsIgnoreCase("D2"))
+            D2 = player;
+        if (play.equalsIgnoreCase("D3"))
+            D3 = player;
     }
 
     public static String getComputerMove()
     {
-        if (A1 == 0)
-            return "A1";
-        if (A2 == 0)
-            return "A2";
-        if (A3 == 0)
-            return  "A3";
-        if (B1 == 0)
-            return  "B1";
-        if (B2 == 0)
-            return  "B2";
-        if (B3 == 0)
-            return  "B3";
-        if (C1 == 0)
-            return  "C1";
-        if (C2 == 0)
-            return  "C2";
-        if (C3 == 0)
-            return  "C3";
+        if (T1 == 0)
+            return "T1";
+        if (T2 == 0)
+            return "T2";
+        if (T3 == 0)
+            return  "T3";
+        if (M1 == 0)
+            return  "M1";
+        if (M2 == 0)
+            return  "M2";
+        if (M3 == 0)
+            return  "M3";
+        if (D1 == 0)
+            return  "D1";
+        if (D2 == 0)
+            return  "D2";
+        if (D3 == 0)
+            return  "D3";
         return "";
     }
 
 
     public static boolean isGameWon() // checks for row won (all possible winning combinationts)
     {
-        if (isRowWon(A1, A2, A3))
+        if (isRowWon(T1, T2, T3))
             return true;
-        if (isRowWon(B1, B2, B3))
+        if (isRowWon(M1, M2, M3))
             return true;
-        if (isRowWon(C1, C2, C3))
+        if (isRowWon(D1, D2, D3))
             return true;
-        if (isRowWon(A1, B1, C1))
+        if (isRowWon(T1, M1, D1))
             return true;
-        if (isRowWon(A2, B2, C2))
+        if (isRowWon(T2, M2, D2))
             return true;
-        if (isRowWon(A3, B3, C3))
+        if (isRowWon(T3, M3, D3))
             return true;
-        if (isRowWon(A1, B2, C3))
+        if (isRowWon(T1, M2, D3))
             return true;
-        if (isRowWon(A3, B2, C1))
+        if (isRowWon(T3, M2, D1))
             return true;
         return false;
     }
