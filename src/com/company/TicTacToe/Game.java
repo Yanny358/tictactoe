@@ -8,14 +8,14 @@ public class Game {
     public static void main(String[] args) {
 
         String prompt = "Enter your first move(T1 for top left, M1 middle left , D1 down left etc.): "; // prompt for convenience
-        String humanMove = "";
-        String computerMove = "";
+        String humanProg = "";
+        String computerProg = "";
         boolean gameIsWon = false; // initial state
 
         for (int i = 1; i <10; i++)  //Because we have 3x3 board , we only have 9 moves
         {
-            humanMove = getMove(prompt);
-            updateBoard(humanMove, 1);
+            humanProg = getMove(prompt);
+            updateBoard(humanProg, 1);
             displayBoard();
             if (isGameWon())
             {
@@ -27,9 +27,9 @@ public class Game {
 
             if (i < 9)
             {
-                computerMove = getComputerMove();
-                System.out.println("Computer placed at" + computerMove);
-                updateBoard(computerMove, 2);
+                computerProg = getComputerMove();
+                System.out.println("Computer placed at" + computerProg);
+                updateBoard(computerProg, 2);
                 displayBoard();
                 if (isGameWon())
                 {
@@ -60,7 +60,7 @@ public class Game {
         System.out.println(line);
         System.out.println();
     }
-// 0 for an empty square , 1 for X, 2 for O
+    // 0 for an empty square , 1 for X, 2 for O
     public static String getXO(int square) // player will be playing with X, computer with O
     {
         if (square == 1)
@@ -74,7 +74,7 @@ public class Game {
     {
         String move;
         System.out.print(prompt);
-        move = sc.nextLine();
+        move = sc.nextLine();  // to retrieve a move
         if (!isValidPlay(move))
         {
             System.out.println("It is not a valid play.");
@@ -182,9 +182,6 @@ public class Game {
     {
         return ((a == b) & (a == c) & (a != 0));
     }
-
-
-
 
 
 }
