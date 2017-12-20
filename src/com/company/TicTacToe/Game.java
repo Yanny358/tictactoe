@@ -4,7 +4,7 @@ import java.util.Scanner; //https://docs.oracle.com/javase/7/docs/api/java/util/
 
 public class Game {
     static int T1, T2, T3, M1, M2, M3, D1, D2, D3; // T1 for top left, M1 middle left , D1 down left etc.
-    static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);   // to read input from the console
     public static void main(String[] args) {
 
         String prompt = "Enter your first move(T1 for top left, M1 middle left , D1 down left etc.): "; // prompt for convenience
